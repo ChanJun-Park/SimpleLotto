@@ -19,6 +19,7 @@ buildscript {
         arch_testing_version = '2.0.0'
         timber_version = '4.7.1'
         room_version = '2.4.2'
+        coroutine_version = '1.5.2'
     }
 
     dependencies {
