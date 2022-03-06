@@ -5,6 +5,8 @@ buildscript {
         arch_version = '2.1.0'
         nav_version = '2.4.1'
         fragment_version = '1.4.1'
+        retrofit_version = '2.9.0'
+        moshi_version = '1.13.0'
     }
 
     dependencies {
