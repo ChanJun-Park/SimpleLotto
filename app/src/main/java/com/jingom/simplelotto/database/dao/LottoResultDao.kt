@@ -1,0 +1,39 @@
+package com.jingom.simplelotto.database.dao
+
+import androidx.lifecycle.LiveData
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy.REPLACE
+import androidx.room.Query
+import androidx.room.Update
+import com.jingom.simplelotto.database.model.DatabaseLottoResult
+
+@Dao
+interface LottoResultDao {
+	@Insert(onConflict = REPLACE)
+	suspend fun insert(lottoResult: DatabaseLottoResult)
+
+	@Update
+	suspend fun update(lottoResult: DatabaseLottoResult): Int
+
+	@Query("SELECT * FROM lotto_result WHERE lottery_no = :lotteryNo")
+	suspend fun get(lotteryNo: Int): DatabaseLottoResult?
+
+	@Query("SELECT * FROM lotto_result ORDER BY lottery_no DESC")
+	suspend fun getAll(): List<DatabaseLottoResult>
+
+	@Query("SELECT lottery_no FROM lotto_result ORDER BY lottery_no DESC")
+	suspend fun getAllLotteryNo(): List<Int>
+
+	@Query("SELECT * FROM lotto_result ORDER BY lottery_no DESC LIMIT 1")
+	fun getLatest(): LiveData<DatabaseLottoResult?>
+
+	@Query("SELECT lottery_no FROM lotto_result ORDER BY lottery_no ASC LIMIT 1")
+	suspend fun getFirstLotteryNoInDB(): Int?
+
+	@Query("SELECT lottery_no FROM lotto_result ORDER BY lottery_no DESC LIMIT 1")
+	suspend fun getLastLotteryNoInDB(): Int?
+
+	@Query("DELETE FROM lotto_result")
+	suspend fun clear()
+}
