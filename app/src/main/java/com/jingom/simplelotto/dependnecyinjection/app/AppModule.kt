@@ -1,5 +1,8 @@
 package com.jingom.simplelotto.dependnecyinjection.app
 
+import android.app.Application
+import androidx.room.Room
+import com.jingom.simplelotto.database.LottoDatabase
 import com.jingom.simplelotto.network.DHLottoApi
 import com.jingom.simplelotto.network.UrlProvider
 import com.squareup.moshi.Moshi
@@ -37,4 +40,16 @@ class AppModule {
     @Provides
     @AppScope
     fun dhLottoApi(retrofit: Retrofit): DHLottoApi = retrofit.create(DHLottoApi::class.java)
+
+	@Provides
+	@AppScope
+	fun lottoDatabase(application: Application): LottoDatabase {
+		return Room.databaseBuilder(
+			application,
+			LottoDatabase::class.java,
+			"lotto_database"
+		)
+			.fallbackToDestructiveMigration()
+			.build()
+	}
 }
