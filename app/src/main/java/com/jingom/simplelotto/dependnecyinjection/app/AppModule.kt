@@ -19,6 +19,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 @InstallIn(SingletonComponent::class)
 class AppModule {
 
+	private lateinit var lottoDatabase: LottoDatabase
+
     @Provides
     @AppScope
     fun moshi(): Moshi = Moshi.Builder()
@@ -45,13 +47,15 @@ class AppModule {
 	@Provides
 	@AppScope
 	fun lottoDatabase(application: Application): LottoDatabase {
-		return Room.databaseBuilder(
+		lottoDatabase = Room.databaseBuilder(
 			application,
 			LottoDatabase::class.java,
 			"lotto_database"
 		)
 			.fallbackToDestructiveMigration()
 			.build()
+
+		return lottoDatabase
 	}
 
 	@Provides
