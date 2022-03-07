@@ -3,6 +3,7 @@ package com.jingom.simplelotto.dependnecyinjection.app
 import android.app.Application
 import androidx.room.Room
 import com.jingom.simplelotto.database.LottoDatabase
+import com.jingom.simplelotto.database.dao.LottoResultDao
 import com.jingom.simplelotto.network.DHLottoApi
 import com.jingom.simplelotto.network.UrlProvider
 import com.squareup.moshi.Moshi
@@ -52,4 +53,8 @@ class AppModule {
 			.fallbackToDestructiveMigration()
 			.build()
 	}
+
+	@Provides
+	@AppScope
+	fun lottoResultDao(lottoDatabase: LottoDatabase): LottoResultDao = lottoDatabase.lottoResultDao
 }
