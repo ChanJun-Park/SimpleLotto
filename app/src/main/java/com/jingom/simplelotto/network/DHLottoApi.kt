@@ -7,5 +7,5 @@ import retrofit2.http.Query
 
 interface DHLottoApi {
 	@GET("common.do")
-	suspend fun getLottoNumber(@Query("method") method: String, @Query("drwNo") drwNo: Int): Response<NetworkLottoResult>
+	suspend fun fetchLottoNumber(@Query("method") method: String, @Query("drwNo") drwNo: Int): Response<NetworkLottoResult>
 }
