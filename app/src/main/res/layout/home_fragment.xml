@@ -20,8 +20,8 @@
                 android:id="@+id/home_ui_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:paddingStart="@dimen/space_medium"
+                android:paddingEnd="@dimen/space_medium"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/latest_lotto_result_list_item"
                 tools:itemCount="1" />

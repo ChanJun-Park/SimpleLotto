@@ -3,4 +3,11 @@
     <dimen name="text_size_header_1">25sp</dimen>
     <dimen name="text_size_header_2">23sp</dimen>
     <dimen name="text_size_body_1">19sp</dimen>
+
+    <dimen name="space_tiny">4dp</dimen>
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="space_medium">16dp</dimen>
+    <dimen name="space_large">32dp</dimen>
+    <dimen name="space_huge">64dp</dimen>
+
 </resources>
