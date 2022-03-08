@@ -11,7 +11,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:name=".SimpleLottoApplication"
             android:supportsRtl="true"
-            android:theme="@style/Theme.SimpleLotto">
+            android:theme="@style/Theme.SimpleLotto.DayNight">
         <activity
                 android:name=".screens.main.MainActivity"
                 android:exported="true">
