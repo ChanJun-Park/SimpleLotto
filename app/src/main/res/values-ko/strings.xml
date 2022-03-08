@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">심플로또</string>
+    <string name="this_week_lotto_number">이번주 로또 번호</string>
+    <string name="round">%d 회</string>
+</resources>

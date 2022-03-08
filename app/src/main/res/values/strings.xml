@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleLotto</string>
+    <string name="this_week_lotto_number">Winning Numbers</string>
+    <string name="round">%d Round</string>
 </resources>

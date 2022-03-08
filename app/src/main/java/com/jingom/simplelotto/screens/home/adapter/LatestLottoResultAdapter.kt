@@ -27,7 +27,7 @@ class LatestLottoResultAdapter: RecyclerView.Adapter<LatestLottoResultAdapter.La
 	class LatestLottoResultViewHolder(private val binding: LatestLottoResultListItemBinding): RecyclerView.ViewHolder(binding.root) {
 
 		fun bind(latestLottoResult: LottoResult?) {
-
+			binding.lottoResult = latestLottoResult
 		}
 
 		companion object {

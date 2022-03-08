@@ -10,4 +10,6 @@
     <dimen name="space_large">32dp</dimen>
     <dimen name="space_huge">64dp</dimen>
 
+    <dimen name="card_radius">8dp</dimen>
+
 </resources>

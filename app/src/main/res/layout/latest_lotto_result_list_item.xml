@@ -3,47 +3,73 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+                name="lottoResult"
+                type="com.jingom.simplelotto.screens.model.LottoResult" />
+    </data>
+
     <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/card_radius"
             app:cardBackgroundColor="@color/card_background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:src="@drawable/ic_launcher_background"
-                    app:layout_constraintBottom_toBottomOf="@id/title"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/title" />
-
             <TextView
                     android:id="@+id/title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="@dimen/space_medium"
                     android:layout_marginTop="@dimen/space_medium"
                     android:layout_marginEnd="@dimen/space_medium"
                     android:ellipsize="end"
                     android:maxLines="2"
+                    android:text="@string/this_week_lotto_number"
                     android:textAppearance="?attr/textAppearanceHeadline2"
                     android:textDirection="locale"
+                    app:layout_constraintEnd_toStartOf="@id/round_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/round_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_medium"
+                    android:layout_marginTop="@dimen/space_medium"
+                    android:layout_marginEnd="@dimen/space_medium"
+                    android:textAppearance="?attr/textAppearanceHeadline2"
+                    android:textDirection="locale"
+                    app:lottoRoundNumber="@{lottoResult.lotteryNo}"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/image"
+                    app:layout_constraintStart_toEndOf="@id/title"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="@tools:sample/lorem/random" />
+                    tools:text="739회" />
+
+            <TextView
+                    android:id="@+id/sub_info_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textDirection="locale"
+                    app:dayOfLottery="@{lottoResult.day}"
+                    app:layout_constraintEnd_toEndOf="@id/title"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@id/title"
+                    tools:text="2022.03.09" />
 
             <LinearLayout
                     android:id="@+id/lotto_number_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_medium"
                     android:layout_marginStart="@dimen/space_medium"
                     android:layout_marginEnd="@dimen/space_medium"
                     android:orientation="horizontal"
