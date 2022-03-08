@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import com.jingom.simplelotto.R
 import com.jingom.simplelotto.databinding.HomeFragmentBinding
 import com.jingom.simplelotto.screens.dataBindings
+import com.jingom.simplelotto.screens.home.adapter.LatestLottoResultAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -22,5 +23,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
 		super.onViewCreated(view, savedInstanceState)
 		binding.lifecycleOwner = viewLifecycleOwner
 		binding.viewModel = viewModel
+
+		binding.homeUiList.adapter = LatestLottoResultAdapter()
 	}
 }
