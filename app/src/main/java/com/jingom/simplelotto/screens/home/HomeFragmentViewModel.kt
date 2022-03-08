@@ -1,4 +1,4 @@
-package com.jingom.simplelotto.screens.main
+package com.jingom.simplelotto.screens.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainActivityViewModel @Inject constructor(
+class HomeFragmentViewModel @Inject constructor(
 	private val latestLottoResultUseCase: LatestLottoResultUseCase
 ): ViewModel() {
 
