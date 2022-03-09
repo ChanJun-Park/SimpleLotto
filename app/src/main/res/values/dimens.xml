@@ -4,6 +4,7 @@
     <dimen name="text_size_header_2">23sp</dimen>
     <dimen name="text_size_body_1">19sp</dimen>
 
+    <dimen name="space_extreme_tiny">2dp</dimen>
     <dimen name="space_tiny">4dp</dimen>
     <dimen name="space_small">8dp</dimen>
     <dimen name="space_medium">16dp</dimen>
@@ -12,4 +13,5 @@
 
     <dimen name="card_radius">8dp</dimen>
 
+    <dimen name="lotto_ball_height">55dp</dimen>
 </resources>

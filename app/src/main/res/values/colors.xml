@@ -14,4 +14,11 @@
     <color name="simple_lotto_gray_700">#FF171717</color>
     <color name="simple_lotto_gray_900">#FF010101</color>
     <color name="simple_lotto_white">#FFFCFCFC</color>
+
+    <color name="lotto_ball_yellow">#F2C559</color>
+    <color name="lotto_ball_blue">#99C4E4</color>
+    <color name="lotto_ball_red">#E19284</color>
+    <color name="lotto_ball_purple">#A6A3DA</color>
+    <color name="lotto_ball_green">#87CBA1</color>
+
 </resources>

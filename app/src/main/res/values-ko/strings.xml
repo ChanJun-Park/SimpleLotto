@@ -3,4 +3,5 @@
     <string name="app_name">심플로또</string>
     <string name="this_week_lotto_number">이번주 로또 번호</string>
     <string name="round">%d 회</string>
+    <string name="bonus">보너스</string>
 </resources>
