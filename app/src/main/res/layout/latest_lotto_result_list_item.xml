@@ -72,71 +72,71 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/space_medium"
                     android:layout_marginTop="@dimen/space_medium"
-                    android:layout_marginBottom="@dimen/space_medium"
                     android:layout_marginEnd="@dimen/space_medium"
+                    android:layout_marginBottom="@dimen/space_medium"
                     android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/sub_info_text"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintTop_toBottomOf="@id/sub_info_text">
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
+                        android:layout_weight="1"
                         app:lottoNumber="@{lottoResult.no1}" />
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
+                        android:layout_weight="1"
                         app:lottoNumber="@{lottoResult.no2}" />
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
+                        android:layout_weight="1"
                         app:lottoNumber="@{lottoResult.no3}" />
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
+                        android:layout_weight="1"
                         app:lottoNumber="@{lottoResult.no4}" />
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
+                        android:layout_weight="1"
                         app:lottoNumber="@{lottoResult.no5}" />
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
+                        android:layout_weight="1"
                         app:lottoNumber="@{lottoResult.no6}" />
 
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/space_tiny"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/space_tiny"
                         android:text="+"
                         tools:ignore="HardcodedText" />
 
                 <com.jingom.simplelotto.ui.LottoBall
                         android:layout_width="0dp"
                         android:layout_height="@dimen/lotto_ball_height"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="@dimen/space_tiny"
-                        app:setBonus="@{true}"
-                        app:lottoNumber="@{lottoResult.bonusNo}" />
+                        android:layout_weight="1"
+                        app:lottoNumber="@{lottoResult.bonusNo}"
+                        app:setBonus="@{true}" />
 
             </LinearLayout>
 

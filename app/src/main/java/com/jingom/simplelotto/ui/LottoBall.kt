@@ -14,7 +14,7 @@ class LottoBall @JvmOverloads constructor(
 	context: Context,
 	attrs: AttributeSet? = null,
 	defStyleAttr: Int = 0
-): View(context, attrs, defStyleAttr) {
+) : View(context, attrs, defStyleAttr) {
 
 	var lottoNumber: Int = DEFAULT_LOTTO_NUMBER
 		set(value) {
