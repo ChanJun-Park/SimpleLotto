@@ -120,6 +120,9 @@ dependencies {
     // optional - Test helpers
     androidTestImplementation "androidx.work:work-testing:$work_version"
 
+    // Jsoup
+    implementation "org.jsoup:jsoup:1.14.2"
+
     // Robolectric
     testImplementation "org.robolectric:robolectric:$robolectric_version"
 
