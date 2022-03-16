@@ -25,7 +25,7 @@ abstract class ActivityModule {
         fun appCompatActivity(activity: Activity): AppCompatActivity = activity as AppCompatActivity
 
         @Provides
-        fun layoutInflater(activity: Activity) = LayoutInflater.from(activity)
+        fun layoutInflater(activity: Activity): LayoutInflater = LayoutInflater.from(activity)
 
         @Provides
         fun fragmentManager(activity: AppCompatActivity) = activity.supportFragmentManager
