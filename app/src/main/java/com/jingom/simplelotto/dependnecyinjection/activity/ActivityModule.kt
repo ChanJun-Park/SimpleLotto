@@ -3,8 +3,10 @@ package com.jingom.simplelotto.dependnecyinjection.activity
 import android.app.Activity
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import com.jingom.simplelotto.screens.common.ScreensNavigator
 import com.jingom.simplelotto.screens.common.ScreensNavigatorImpl
+import com.jingom.simplelotto.screens.views.ViewMvxFactory
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -28,7 +30,7 @@ abstract class ActivityModule {
         fun layoutInflater(activity: Activity): LayoutInflater = LayoutInflater.from(activity)
 
         @Provides
-        fun fragmentManager(activity: AppCompatActivity) = activity.supportFragmentManager
+        fun fragmentManager(activity: AppCompatActivity): FragmentManager = activity.supportFragmentManager
     }
 
 }

@@ -3,12 +3,14 @@ package com.jingom.simplelotto.screens.views
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.lifecycle.LifecycleOwner
 
 abstract class BaseObservableViewMvx<ListenerType>(
+	lifecycleOwner: LifecycleOwner,
 	layoutInflater: LayoutInflater,
 	parent: ViewGroup?,
 	@LayoutRes layoutResId: Int
-): BaseViewMvx(layoutInflater, parent, layoutResId), ObservableViewMvx<ListenerType> {
+): BaseViewMvx(lifecycleOwner, layoutInflater, parent, layoutResId), ObservableViewMvx<ListenerType> {
 
 	private val listeners = HashSet<ListenerType>()
 
